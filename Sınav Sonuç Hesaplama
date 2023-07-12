@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class AverageGrades {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //Kullanıcıdan Sınav Sonucunu Girdi Olarak Alır
+        int Matematik = scanner.nextInt();
+        int Fizik = scanner.nextInt();
+        int Kimya = scanner.nextInt();
+        int Türkçe = scanner.nextInt();
+        int Tarih = scanner.nextInt();
+        int Müzik = scanner.nextInt();
+
+        // Not Ortalamasını Hesaplar
+        int sum = Matematik + Fizik + Kimya + Türkçe + Tarih + Müzik;
+        int Ortalama = sum / 6;
+
+        // Ortalamayı Yazdırır
+        System.out.println("Not Ortalamanız: " + Ortalama);
+
+        // Kişinin sınıfı geçip geçmediğini hesaplar
+        String geçti = Ortalama >= 60 ? "Geçti" : "Kaldı";
+        System.out.println("Kullanıcı Sınıfı " + geçti );
+    }
+}
